@@ -1,11 +1,15 @@
 // require('dotenv').config({path: './env'})
-import connectDB from "./db/indexdb.js";
 import dotenv from "dotenv"
-import express from "express";
-import {app} from "./app.js"
 dotenv.config({
     path: './.env'
 })
+import connectDB from "./db/indexdb.js";
+import express from "express";
+import {app} from "./app.js"
+
+// console.log("PORT =", process.env.PORT);
+// console.log("ACCESS_TOKEN_SECRET =", process.env.ACCESS_TOKEN_SECRET);
+// console.log("REFRESH_TOKEN_SECRET =", process.env.REFRESH_TOKEN_SECRET);
 
 connectDB()
 .then(() => {
