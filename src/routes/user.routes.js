@@ -30,13 +30,7 @@ router.route("/register").post(
   ]),
   registerUser
 );
-
 router.route("/login").post(loginUser);
-
-// router.get("/test", (req, res) => {
-//     res.send("test route works");
-// });
-
 // Secured Routes
 router.route("/logout").post(verifyJWT, logoutUser);
 router.route("/refresh-token").post(requestAccessToken);
